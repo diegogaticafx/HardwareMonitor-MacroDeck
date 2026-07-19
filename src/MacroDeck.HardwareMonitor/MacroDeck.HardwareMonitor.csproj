@@ -6,8 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>MacroDeck.HardwareMonitor</RootNamespace>
     <AssemblyName>MacroDeck.HardwareMonitor</AssemblyName>
-    <Version>1.0.0.0</Version>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0</FileVersion>
     <InformationalVersion>1.0.0</InformationalVersion>
     <Authors>MacroDeck Hardware Monitor</Authors>
     <Description>Hardware monitor plugin for Macro Deck 2</Description>

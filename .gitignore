@@ -20,6 +20,9 @@ publish-test2/
 .idea/
 *.sln.iml
 
+## Scripts
+deploy.ps1
+
 ## macOS
 .DS_Store
 
