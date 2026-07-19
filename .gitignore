@@ -1,0 +1,25 @@
+## .NET
+bin/
+obj/
+publish-output/
+publish-test/
+publish-test2/
+*.user
+*.suo
+*.sln.docstates
+.vs/
+
+## NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## macOS
+.DS_Store
+

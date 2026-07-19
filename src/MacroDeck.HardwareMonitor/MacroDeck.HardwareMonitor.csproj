@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.22000</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>MacroDeck.HardwareMonitor</RootNamespace>
+    <AssemblyName>MacroDeck.HardwareMonitor</AssemblyName>
+    <Version>1.0.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <Authors>MacroDeck Hardware Monitor</Authors>
+    <Description>Hardware monitor plugin for Macro Deck 2</Description>
+    <PackageId>MacroDeck.HardwareMonitor</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SuchByte.MacroDeck" Version="2.15.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MacroDeck.HardwareMonitor.Core\MacroDeck.HardwareMonitor.Core.csproj" />
+    <ProjectReference Include="..\MacroDeck.HardwareMonitor.Infrastructure\MacroDeck.HardwareMonitor.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

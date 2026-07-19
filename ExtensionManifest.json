@@ -1,0 +1,12 @@
+{
+  "type": "Plugin",
+  "name": "HardwareMonitor",
+  "author": "diegogaticafx",
+  "repository": "https://github.com/diegogaticafx/HardwareMonitor-MacroDeck",
+  "packageId": "MacroDeck.HardwareMonitor",
+  "version": "1.0.0",
+  "target-plugin-api-version": 40,
+  "target-macro-deck-version": "2.15.0",
+  "dll": "MacroDeck.HardwareMonitor.dll",
+  "icon": "ExtensionIcon.png"
+}
