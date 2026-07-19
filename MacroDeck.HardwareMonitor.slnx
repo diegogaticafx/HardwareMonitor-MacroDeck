@@ -2,6 +2,6 @@
   <Folder Name="/src/">
     <Project Path="src/MacroDeck.HardwareMonitor.Core/MacroDeck.HardwareMonitor.Core.csproj" />
     <Project Path="src/MacroDeck.HardwareMonitor.Infrastructure/MacroDeck.HardwareMonitor.Infrastructure.csproj" />
-    <Project Path="src/MacroDeck.HardwareMonitor/MacroDeck.HardwareMonitor.csproj" />
+    <Project Path="MacroDeck.HardwareMonitor.csproj" />
   </Folder>
 </Solution>

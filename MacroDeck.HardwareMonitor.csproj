@@ -4,6 +4,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
+    <DefaultItemExcludes>$(DefaultItemExcludes);src\**;tests\**</DefaultItemExcludes>
     <RootNamespace>MacroDeck.HardwareMonitor</RootNamespace>
     <AssemblyName>MacroDeck.HardwareMonitor</AssemblyName>
     <Version>1.0.0</Version>
@@ -17,7 +18,7 @@
     <PackageReference Include="SuchByte.MacroDeck" Version="2.15.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MacroDeck.HardwareMonitor.Core\MacroDeck.HardwareMonitor.Core.csproj" />
-    <ProjectReference Include="..\MacroDeck.HardwareMonitor.Infrastructure\MacroDeck.HardwareMonitor.Infrastructure.csproj" />
+    <ProjectReference Include="src\MacroDeck.HardwareMonitor.Core\MacroDeck.HardwareMonitor.Core.csproj" />
+    <ProjectReference Include="src\MacroDeck.HardwareMonitor.Infrastructure\MacroDeck.HardwareMonitor.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

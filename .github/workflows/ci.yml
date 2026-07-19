@@ -42,7 +42,7 @@ jobs:
 
     - name: Publish
       run: |
-        dotnet publish src/MacroDeck.HardwareMonitor `
+        dotnet publish MacroDeck.HardwareMonitor.csproj `
           --configuration Release `
           --output publish
 

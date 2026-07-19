@@ -16,7 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\MacroDeck.HardwareMonitor.Core\MacroDeck.HardwareMonitor.Core.csproj" />
     <ProjectReference Include="..\..\src\MacroDeck.HardwareMonitor.Infrastructure\MacroDeck.HardwareMonitor.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\src\MacroDeck.HardwareMonitor\MacroDeck.HardwareMonitor.csproj" />
+    <ProjectReference Include="..\..\MacroDeck.HardwareMonitor.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Using Include="Xunit" />
