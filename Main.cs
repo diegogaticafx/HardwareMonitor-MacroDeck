@@ -15,6 +15,24 @@ public class Main : MacroDeckPlugin
     public Main()
     {
         Instance = this;
+
+        if (_initialized) return;
+
+        try
+        {
+            var factory = HardwareMonitorFactory.Create();
+            _pollingService = factory.PollingService;
+            SensorCache = factory.SensorCache;
+
+            _pollingService.OnPollingCompleted += OnPollingCompleted;
+            _pollingService.Start(1000);
+
+            _initialized = true;
+        }
+        catch
+        {
+            throw;
+        }
     }
 
     public override void Enable()
@@ -32,9 +50,7 @@ public class Main : MacroDeckPlugin
 
             _initialized = true;
         }
-        catch
-        {
-        }
+        catch { }
     }
 
     public void Dispose()

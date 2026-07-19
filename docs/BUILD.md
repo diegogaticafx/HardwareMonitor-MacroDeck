@@ -29,5 +29,5 @@ dotnet test
 ## Publish (self-contained)
 
 ```bash
-dotnet publish src/MacroDeck.HardwareMonitor -c Release -o publish
+dotnet publish MacroDeck.HardwareMonitor.csproj -c Release -o publish
 ```

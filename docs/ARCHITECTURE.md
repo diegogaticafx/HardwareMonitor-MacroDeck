@@ -8,54 +8,40 @@
 │  ┌───────────────────────────────────────────┐  │
 │  │        MacroDeck.HardwareMonitor          │  │
 │  │  ┌─────────────────────────────────────┐  │  │
-│  │  │              Main.cs                │  │  │
-│  │  │             (Plugin)                │  │  │
-│  │  │                                     │  │  │
-│  │  │          Variable                   │  │  │
-│  │  │          Registrar                  │  │  │
-│  │  └─────────────────┬───────────────────┘  │  │
-│  └───────┼───────────────────────────────────┘  │
-└──────────┼────────────────────────────────────┘
-           │
-┌──────────▼────────────────────────────────────┐
-│         Core (Pure Logic)                     │
-│  ┌──────────────┐  ┌────────────────────────┐│
-│  │   Models     │  │    Interfaces          ││
-│  │ - SensorType │  │ - IHardwarePollingSvc  ││
-│  │ - SensorRead │  │ - ISensorCache         ││
-│  │ - HardwareSp │  │ - ILibreHardwareSvc    ││
-│  └──────────────┘  └────────────────────────┘│
-└───────────────────────────────────────────────┘
-           │
-┌──────────▼────────────────────────────────────┐
-│     Infrastructure (Implementation)           │
-│  ┌────────────┐ ┌──────────┐ ┌─────────────┐ │
-│  │ LHM        │ │ CPU Perf │ │ Memory      │ │
-│  │ Provider   │ │ Counter  │ │ provider    │ │
-│  ├────────────┤ ├──────────┤ ├─────────────┤ │
-│  │ Storage    │ │ Sensor   │ │ Polling     │ │
-│  │ Provider   │ │ Cache    │ │ Service     │ │
-│  └────────────┘ └──────────┘ └─────────────┘ │
-└───────────────────────────────────────────────┘
+│  │  │    MacroDeck.HardwareMonitor.dll    │  │  │
+│  │  │  ┌──────────────┐ ┌──────────────┐ │  │  │
+│  │  │  │   Main.cs    │ │   Variable   │ │  │  │
+│  │  │  │  (Plugin)    │ │  Registrar   │ │  │  │
+│  │  │  └──────┬───────┘ └──────────────┘ │  │  │
+│  │  │         │                          │  │  │
+│  │  │  ┌──────▼───────────────────────┐  │  │  │
+│  │  │  │   Core/ (Models + Interfaces)│  │  │  │
+│  │  │  │   Infrastructure/ (Providers │  │  │  │
+│  │  │  │   Cache, Services, Factory)  │  │  │  │
+│  │  │  └──────────────────────────────┘  │  │  │
+│  │  └─────────────────────────────────────┘  │  │
+│  └───────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────┘
 ```
 
 ## Project Structure
 
-### MacroDeck.HardwareMonitor.Core
-Pure business logic with no external dependencies.
+All code is in a single project `MacroDeck.HardwareMonitor.csproj`, organized in folders:
 
-- **Models**: `SensorType`, `SensorReading`, `HardwareSnapshot`
+### `Core/` — Models and Interfaces
+Pure logic with no external dependencies.
+
 - **Interfaces**: `ILibreHardwareService`, `ISensorCache`, `IHardwarePollingService`
+- **Models**: `SensorType`, `SensorReading`, `HardwareSnapshot`
 
-### MacroDeck.HardwareMonitor.Infrastructure
+### `Infrastructure/` — Implementations
 All external access implementations.
 
 - **Providers**: Wrappers for LibreHardwareMonitorLib, P/Invoke calls for CPU/RAM
 - **Cache**: Thread-safe sensor cache using `ConcurrentDictionary`
 - **Services**: Polling service with `System.Timers.Timer`
 
-### MacroDeck.HardwareMonitor
-Macro Deck 2 plugin entry point.
+### Root files — Plugin entry point
 
 - **Main.cs**: Plugin lifecycle, DI wiring
 - **VariableRegistrar**: Updates Macro Deck variables from sensor cache

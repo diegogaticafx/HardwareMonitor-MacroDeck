@@ -27,11 +27,10 @@
 
 ### WinRing0 Driver (CPU Temperature)
 
-Some CPUs require the **WinRing0** kernel driver for temperature readings. If `{variable.cpu.temp}` does not appear, install any hardware monitoring tool once:
+Some CPUs require the **WinRing0** kernel driver for temperature readings. If `{cpu.temp}` does not appear, install any hardware monitoring tool once:
 
 - **LibreHardwareMonitor** (recommended) — [librehardwaremonitor.org](https://librehardwaremonitor.org)
-- **HWMonitor**, **CPU-Z**, **AIDA64**, **Open Hardware Monitor**
 
-Admin rights are needed only for that first install. After that, Macro Deck 2 reads CPU temperature normally without admin rights.
+Admin rights are needed only for that first install. After that, Macro Deck 2 reads CPU temperature normally with admin rights.
 
 The driver is **not required** for the rest of the plugin — all other variables work without it.
