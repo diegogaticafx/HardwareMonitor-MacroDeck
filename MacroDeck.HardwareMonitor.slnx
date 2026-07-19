@@ -4,7 +4,4 @@
     <Project Path="src/MacroDeck.HardwareMonitor.Infrastructure/MacroDeck.HardwareMonitor.Infrastructure.csproj" />
     <Project Path="src/MacroDeck.HardwareMonitor/MacroDeck.HardwareMonitor.csproj" />
   </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/MacroDeck.HardwareMonitor.Tests/MacroDeck.HardwareMonitor.Tests.csproj" />
-  </Folder>
 </Solution>

@@ -25,7 +25,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --configuration Release --no-build
+      run: dotnet test tests/MacroDeck.HardwareMonitor.Tests/MacroDeck.HardwareMonitor.Tests.csproj --configuration Release
 
   release:
     if: startsWith(github.ref, 'refs/tags/v')
